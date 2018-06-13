@@ -1,5 +1,5 @@
 ;(function($){
-  $.fn.discriptsions = function(options){
+  $.fn.descriptions = function(options){
 
     var elements = this;
     var datapara = [];//data属性から得る値の配列
@@ -47,7 +47,7 @@
           font_color:'#FFF',//フォントの色
           background:'#666',//バックグラウントの色
           num_radius:50//角
-        }//$.fn.discriptsions_data_defaults = {
+        }//$.fn.descriptions_data_defaults = {
 
         var rx =$.extend({},df,rp);
         //this毎の小分けの配列にオブジェクトを追加
@@ -58,7 +58,7 @@
 
       //パラメータセット
       var dataparam = datapara;//データ
-      var genparam= $.extend({},$.fn.discriptsions_general_defaults,options);//全体設定
+      var genparam= $.extend({},$.fn.descriptions_general_defaults,options);//全体設定
 
       //親要素のポジションを相対に設定
       $(this).css({
@@ -152,16 +152,16 @@
           action_set('1');
         }
 
-    });//function discriptsions(){
+    });//function descriptions(){
 
         return this;
-  }//$.fn.discriptsions = function(){
+  }//$.fn.descriptions = function(){
 
 
   //全体初期値
-  $.fn.discriptsions_general_defaults = {
+  $.fn.descriptions_general_defaults = {
     action:'off',
     transition:'0.5'
-  }//$.fn.discriptsions_general_defaults = {
+  }//$.fn.descriptions_general_defaults = {
 
 })(jQuery);
