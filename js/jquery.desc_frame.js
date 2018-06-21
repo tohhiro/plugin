@@ -1,5 +1,5 @@
 ;(function($){
-  $.fn.descriptions = function(options){
+  $.fn.desc_freame = function(options){
 
     var elements = this;
     var datapara = [];//data属性から得る値の配列
@@ -47,7 +47,7 @@
           font_color:'#FFF',//フォントの色
           background:'#666',//バックグラウントの色
           num_radius:50//角
-        }//$.fn.descriptions_data_defaults = {
+        }//$.fn.desc_freame_data_defaults = {
 
         var rx =$.extend({},df,rp);
         //this毎の小分けの配列にオブジェクトを追加
@@ -58,7 +58,7 @@
 
       //パラメータセット
       var dataparam = datapara;//データ
-      var genparam= $.extend({},$.fn.descriptions_general_defaults,options);//全体設定
+      var genparam= $.extend({},$.fn.desc_freame_general_defaults,options);//全体設定
 
       //親要素のポジションを相対に設定
       $(this).css({
@@ -89,7 +89,7 @@
           var nl = dataparam[i][n].left-dataparam[i][n].num_left;
           //var nt = dataparam[i][n].num_top;
           //var nl = dataparam[i][n].num_left;
-            $(this).find('.desc_number').eq(n).css({
+            $(this).find('.desc_strings').eq(n).css({
             'position':'absolute',//絶対位置
             'text-align':'center',//テキスト位置
             'padding':'3px 7px',//余白
@@ -107,7 +107,7 @@
         //アクションを有効にした場合、一時的に透明、表示の設定
         function action_set(n){
           $(elements).find('.desc_circle').css('opacity',n);
-          $(elements).find('.desc_number').css('opacity',n);
+          $(elements).find('.desc_strings').css('opacity',n);
         }
 
         //ホバーさせた場合の設定
@@ -152,16 +152,16 @@
           action_set('1');
         }
 
-    });//function descriptions(){
+    });//function desc_freame(){
 
         return this;
-  }//$.fn.descriptions = function(){
+  }//$.fn.desc_freame = function(){
 
 
   //全体初期値
-  $.fn.descriptions_general_defaults = {
+  $.fn.desc_freame_general_defaults = {
     action:'off',
     transition:'0.5'
-  }//$.fn.descriptions_general_defaults = {
+  }//$.fn.desc_freame_general_defaults = {
 
 })(jQuery);
